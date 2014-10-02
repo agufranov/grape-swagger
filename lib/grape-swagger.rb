@@ -233,6 +233,7 @@ module Grape
                 items = {}
 
                 raw_data_type = value.is_a?(Hash) ? (value[:type] || 'string').to_s : 'string'
+                raw_data_type = 'Boolean' if raw_data_type == 'Virtus::Attribute::Boolean'
                 data_type     = case raw_data_type
                                 when 'Boolean', 'Date', 'Integer', 'String'
                                   raw_data_type.downcase
