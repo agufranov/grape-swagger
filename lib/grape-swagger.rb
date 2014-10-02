@@ -422,7 +422,7 @@ module Grape
             end
 
             def is_primitive?(type)
-              %w(integer long float double string byte boolean date dateTime).include? type
+              %w(integer long float double string byte boolean date dateTime Virtus::Attribute::Boolean).include? type
             end
 
             def generate_typeref(type)
